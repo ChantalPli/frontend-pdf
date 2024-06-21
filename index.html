@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>PDF EXTRACTOR</title>
+</head>
+
+<body>
+    <header>
+        <img decoding="async" width="189" height="39"
+            src="https://appropia.com/wp-content/smush-webp/2019/10/LogoNuevo.png.webp" alt="" class="wp-image-5170">
+    </header>
+    <h1>Upload your pdf file</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+        <label for="document">Select PDF:</label>
+        <input type="file" id="document" name="document" accept="application/pdf" required>
+        <button type="submit">Analyze your file</button>
+    </form>
+    <section id="result-container">
+
+    </section>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
