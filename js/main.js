@@ -15,12 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 const result = await response.json();
                 displayResult(result)
 
+                if (result.fileId) {
+                    document.getElementById('result-container').classList.add('has-content');
+                } else {
+                    document.getElementById('result-container').classList.remove('has-content');
+                }
+
             } else {
                 const error = await response.json();
                 alert('Error: ' + error.message);
             }
-
-
 
         } catch (err) {
             console.error('Error:', err);
@@ -31,10 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const resultContainer = document.getElementById('result-container');
         resultContainer.innerHTML = `
             <div>
-                <h2>Resultados del Procesamiento del Documento</h2>
-                <p>File ID: ${result.fileId}</p>
-                <p>Legal Representative: ${result.legalRepresentative}</p>
-                <p>Society Activity: ${result.societyActivity}</p>
+                <h2>Result of document processing</h2>
+                <p>FILE ID: ${result.fileId}</p>
+                <p>REPRESENTANTE LEGAL: ${result.legalRepresentative}</p>
+                <p>REPRESENTANTE LEGAL SUPLENTE: ${result.alternateLegalRepresentative}
+                <p>ACTIVIDAD DE LA SOCIEDAD: ${result.societyActivity}</p>
                 <p> ${result.ciiuCode}</p>
             </div>
         `;

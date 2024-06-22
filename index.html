@@ -13,15 +13,26 @@
         <img decoding="async" width="189" height="39"
             src="https://appropia.com/wp-content/smush-webp/2019/10/LogoNuevo.png.webp" alt="" class="wp-image-5170">
     </header>
-    <h1>Upload your pdf file</h1>
-    <form id="upload-form" enctype="multipart/form-data">
-        <label for="document">Select PDF:</label>
-        <input type="file" id="document" name="document" accept="application/pdf" required>
-        <button type="submit">Analyze your file</button>
-    </form>
-    <section id="result-container">
-
-    </section>
+    <main>
+        <div class="content">
+            <div class="left-side">
+                <h1>Extract data from your PDF</h1>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <label for="document">Select PDF:</label>
+                    <input type="file" id="document" name="document" accept="application/pdf" required>
+                    <button type="submit">EXTRACT DATA</button>
+                </form>
+                <section id="result-container">
+                    <!-- Result data will be displayed here -->
+                </section>
+            </div>
+            <div class="right-side">
+                <img fetchpriority="high" decoding="async" id="pc-img"
+                    src="https://appropia.com/wp-content/smush-webp/2024/03/Imagen-Alfresco-300x169.png.webp"
+                    alt="Alfresco gestion documental" title="Imagen Alfresco" class="wp-image-33273" />
+            </div>
+        </div>
+    </main>
     <script src="/js/main.js"></script>
 </body>
 
