@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>REPRESENTANTE LEGAL: ${result.legalRepresentative}</p>
                 <p>REPRESENTANTE LEGAL SUPLENTE: ${result.alternateLegalRepresentative}
                 <p>ACTIVIDAD DE LA SOCIEDAD: ${result.societyActivity}</p>
-                <p> ${result.ciiuCode}</p>
+                <p>${result.ciiuCode}</p>
             </div>
         `;
     }
